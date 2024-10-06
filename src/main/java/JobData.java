@@ -96,7 +96,8 @@ public class JobData {
             for(Map.Entry<String, String> data: eachHashMap.entrySet()){
                 String eachKey = data.getKey().toLowerCase();
                 String eachValue = data.getValue().toLowerCase();
-                if(eachKey.contains(value.toLowerCase()) || eachValue.contains(value.toLowerCase())){ //if the hashmap contains the value and isn't in jobs, add it
+                //if the hashmap contains the value and is not in jobs, then it will add it
+                if(eachKey.contains(value.toLowerCase()) || eachValue.contains(value.toLowerCase())){
                     if (!jobs.contains(eachHashMap)) {
                         jobs.add(eachHashMap);
                     }
